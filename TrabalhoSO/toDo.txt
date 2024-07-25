@@ -1,0 +1,27 @@
+//Davi Matheus Garcia Pedroza - 160070040
+//Pedro Lisias Viana Arcoverde Alves - 190036559
+//Weliton Cesar Pereira Barreto - 200044532
+
+1 - Programa recebe os cores e arquivo
+2 -  l'e o arquivo criando a lista para cada processo seguindo os dados do arquivo
+    <num> <tempo> <dependencia>
+3 - cada processo tem os dados 
+    num - inteiro
+    tempo - string
+    dependencia - string -> []
+    numeroDependencias - inteiro
+    pid = pid
+    tempoInicio
+    tempoFinal
+    status - > inteiro | 0- esperando, 1 - executando, 2 - finalizado
+4 - Inicia-se o escalonador (Terminar)    
+
+
+gcc ./main.c ./escalonador -O0 -o escalona 
+./escalona <numeroCores> <ArquivoTexto>
+exemplo: ./escalona 4 processo_8.txt
+
+Criar exec, verificar se foi trocado por um FOR, 
+antes tava com sleep de 15/30 a professora pediu pra gastar cpu.
+gcc ./processo_15.c -O0 -o teste15
+gcc ./processo_30.c -O0 -o teste30
