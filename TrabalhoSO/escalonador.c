@@ -9,7 +9,7 @@ processo *processos[50];
 int numeroProcessos = 0;
 int numeroCores;
 int coresLivres;
-time_t makespanIniciocio;
+time_t makespanInicio;
 
 bool lerArquivo(char *arquivo) {
     FILE *file = fopen(arquivo, "rt");
@@ -71,8 +71,8 @@ void executarProcesso(processo *proc) {
     } else { /* Pai executando */
         proc->pid = pid_filho;
         proc->status = 1;
-        if (makespanIniciocio == 0) {
-            time(&makespanIniciocio);
+        if (makespanInicio == 0) {
+            time(&makespanInicio);
         }
         time(&proc->tempoInicio);
         printf("processo %d executando\n", proc->num);
@@ -127,9 +127,9 @@ void escalonador() {
 
         if (todosExecutados) {
             time(&makespanFinal);
-            printf("\n\nMAKESPAN: %ld segundos\n\n", makespanFinal - makespanIniciocio);
+            printf("\n\nMAKESPAN: %ld segundos\n\n", makespanFinal - makespanInicio);
             for (int i = 0; i < numeroProcessos; i++) {
-                printf("Processo: %d - Tempo de execução: %ld segundos\n", processos[i]->num, processos[i]->tempoFinal - makespanIniciocio);
+                printf("Processo: %d - Tempo de execução: %ld segundos\n", processos[i]->num, processos[i]->tempoFinal - makespanInicio);
             }
             break;
         }
