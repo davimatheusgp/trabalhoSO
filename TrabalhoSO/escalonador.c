@@ -1,8 +1,17 @@
 #include "escalonador.h"
 
+//Integrantes do grupo
 //Davi Matheus Garcia Pedroza - 160070040
 //Pedro Lisias Viana Arcoverde Alves - 190036559
 //Weliton Cesar Pereira Barreto - 200044532
+
+//Setup
+//GCC (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0
+
+//Estratégia do escalonador
+//O algoritmo de escalonamento mantém uma fila com os processos.
+//O processo selecionado é o primeiro encontrado numa varredura nessa fila, que não possui dependências e não foi executado ainda.
+//Ou seja, se houver mais de um processo disponível para execução o algoritmo aplica uma abordagem FIFO.
 
 
 processo *processos[50];
