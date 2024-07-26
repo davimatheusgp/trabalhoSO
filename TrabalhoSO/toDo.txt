@@ -17,7 +17,7 @@
 4 - Inicia-se o escalonador (Terminar)    
 
 
-gcc ./main.c ./escalonador -O0 -o escalona 
+gcc ./main.c ./escalonador.c -O0 -o escalona 
 ./escalona <numeroCores> <ArquivoTexto>
 exemplo: ./escalona 4 processo_8.txt
 
