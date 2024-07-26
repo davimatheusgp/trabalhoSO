@@ -68,11 +68,9 @@ void executarProcesso(processo *proc) {
 
     if (pid_filho == 0) { /* Filho executando */
         execl(proc->tempo, proc->tempo, (char *)NULL);
-        printf("aqui");
     } else { /* Pai executando */
         proc->pid = pid_filho;
         proc->status = 1;
-        printf("aqui2");
         if (makespanIniciocio == 0) {
             time(&makespanIniciocio);
         }
